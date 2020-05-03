@@ -1,0 +1,10 @@
+plugin:
+    name: 'popovn.bigbuyapi::lang.plugin.name'
+    description: 'popovn.bigbuyapi::lang.plugin.description'
+    author: 'Nikita Popov'
+    icon: oc-icon-cart-arrow-down
+    homepage: ''
+permissions:
+    api_settings:
+        tab: API
+        label: 'API Settings'
