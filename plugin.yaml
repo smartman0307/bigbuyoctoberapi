@@ -8,3 +8,8 @@ permissions:
     api_settings:
         tab: API
         label: 'API Settings'
+navigation:
+    bigbuy-api:
+        label: BigBuy
+        url: popovn/bigbuyapi/tests
+        icon: icon-code-fork

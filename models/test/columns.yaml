@@ -1,0 +1,22 @@
+columns:
+    id:
+        label: id
+        type: number
+        sortable: true
+    command:
+        label: command
+        type: text
+        searchable: true
+        sortable: false
+    created_at:
+        label: created_at
+        type: datetime
+        sortable: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        sortable: true
+    url:
+        label: url
+        type: text
+        searchable: true

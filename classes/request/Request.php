@@ -71,7 +71,6 @@ class Request
 
     public function send()
     {
-        header('Content-Type: application/json'); // Specify the type of data
         $header = array('Content-Type: application/json');
         $ch = curl_init($this->url); // Initialise cURL
 

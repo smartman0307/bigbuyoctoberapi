@@ -1,0 +1,22 @@
+fields:
+    command:
+        label: Command
+        span: auto
+        readOnly: 1
+        type: text
+    url:
+        label: URL
+        span: auto
+        readOnly: 1
+        type: text
+    result:
+        label: 'Text area'
+        size: giant
+        span: full
+        readOnly: 1
+        type: textarea
+    created_at:
+        label: Date
+        span: auto
+        readOnly: 1
+        type: text

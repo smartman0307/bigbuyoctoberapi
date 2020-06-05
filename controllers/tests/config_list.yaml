@@ -1,0 +1,12 @@
+list: $/popovn/bigbuyapi/models/test/columns.yaml
+modelClass: PopovN\BigBuyAPI\Models\Test
+title: TEsts
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'popovn/bigbuyapi/tests/update/:id'

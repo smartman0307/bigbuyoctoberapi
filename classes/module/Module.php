@@ -6,7 +6,7 @@ use PopovN\BigBuyAPI\Classes\Request\GetRequest;
 
 class Module extends BigBuy
 {
-    private $urlPrefix = '/rest/module';
+    public $urlPrefix = '/rest/module';
     private $requestUrl;
 
     /**

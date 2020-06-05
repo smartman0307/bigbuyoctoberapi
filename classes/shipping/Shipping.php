@@ -7,7 +7,7 @@ use PopovN\BigBuyAPI\Classes\Request\PostRequest;
 
 class Shipping extends BigBuy
 {
-    private $urlPrefix = '/rest/shipping';
+    public $urlPrefix = '/rest/shipping';
     private $requestUrl;
 
     /**

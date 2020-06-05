@@ -1,0 +1,10 @@
+name: TEsts
+form: $/popovn/bigbuyapi/models/test/fields.yaml
+modelClass: PopovN\BigBuyAPI\Models\Test
+defaultRedirect: popovn/bigbuyapi/tests
+create:
+    redirect: 'popovn/bigbuyapi/tests/update/:id'
+    redirectClose: popovn/bigbuyapi/tests
+update:
+    redirect: popovn/bigbuyapi/tests
+    redirectClose: popovn/bigbuyapi/tests

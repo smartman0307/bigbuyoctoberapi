@@ -2,14 +2,13 @@
 namespace PopovN\BigBuyAPI\Classes;
 
 use Carbon\Carbon;
-use PopovN\BigBuyAPI\Classes\Request\GetRequest;
 use PopovN\BigBuyAPI\Models\Settings;
 use Cache;
 
 class BigBuy
 {
     private $apiKey;
-    private $apiMode;
+    private $devMode;
     protected $apiUrl;
     protected $apiToken;
     protected $format = 'json';
@@ -19,11 +18,12 @@ class BigBuy
      */
     public function __construct()
     {
+        $this->devMode = Settings::get('dev');
         $this->apiKey = Settings::get('api_key');
-        $this->apiMode = Settings::get('dev');
         $this->apiUrl = "https://api.bigbuy.eu";
-        if ($this->apiMode) {
+        if ($this->devMode) {
             $this->apiUrl = "https://api.sandbox.bigbuy.eu";
+            $this->apiKey = Settings::get('dev_api_key');
         }
         if (Cache::has('bigbuy_token')) {
             $this->apiToken = Cache::get('bigbuy_token');
@@ -35,14 +35,9 @@ class BigBuy
 
     private function getAPIToken()
     {
-        $endPoint = $this->apiUrl . "/token";
-        $data = [
-            'api_key' => $this->apiKey
-        ];
-        $token = GetRequest::send($endPoint, $data);
         $expiresAt = Carbon::now()->addMinutes(60);
-        Cache::put('bigbuy_token', $token, $expiresAt);
+        Cache::put('bigbuy_token', $this->apiKey, $expiresAt);
 
-        return $token;
+        return $this->apiKey;
     }
 }

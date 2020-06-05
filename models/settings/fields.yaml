@@ -8,3 +8,7 @@ fields:
         span: left
         required: 1
         type: text
+    dev_api_key:
+        label: 'Sandbox API Key'
+        span: auto
+        type: text
